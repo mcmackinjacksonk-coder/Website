@@ -6,24 +6,24 @@
 import { useEffect, useRef, useState } from "react";
 import { CalendarCheck, Truck, Smile, ArrowRight } from "lucide-react";
 
-const steps = [
+  const steps = [
   {
     icon: CalendarCheck,
     step: "01",
-    title: "Book in Under 2 Minutes",
-    desc: "Call or fill out our form. Pick a time that works — same-day slots available. No commitment until we arrive.",
+    title: "Get Your Free Estimate",
+    desc: "Call or fill out our form. We'll provide an upfront price with no obligation.",
   },
   {
     icon: Truck,
     step: "02",
-    title: "We Arrive, You Relax",
-    desc: "Our uniformed crew shows up on time, gives you an upfront price, and loads everything. You don't lift a finger.",
+    title: "Schedule Your Pickup",
+    desc: "Once you approve the estimate, we'll schedule a convenient time for your junk removal.",
   },
   {
     icon: Smile,
     step: "03",
-    title: "Breathe in Your Clear Space",
-    desc: "We haul it away and handle responsible disposal. You're left with a clean, open space and total peace of mind.",
+    title: "We Remove Your Junk",
+    desc: "Our crew arrives and removes your items. We handle all the heavy lifting and haul everything away responsibly.",
   },
 ];
 

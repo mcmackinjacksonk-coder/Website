@@ -109,13 +109,12 @@ export default function Contact() {
             </div>
 
             {/* Free estimate note */}
-            <div className="bg-[#e8f5ed] rounded-2xl p-6 border border-[#d4eedd]">
+              <div className="bg-[#e8f5ed] rounded-2xl p-6 border border-[#d4eedd]">
               <p className="text-[#1a7a3c] font-semibold text-sm mb-1">
                 🍀 Free, No-Obligation Estimates
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We'll give you an upfront price before any work begins. No
-                hidden fees, no surprises — ever.
+                We provide upfront pricing before any work begins. No hidden fees.
               </p>
             </div>
           </div>
@@ -228,4 +227,3 @@ export default function Contact() {
     </section>
   );
 }
-

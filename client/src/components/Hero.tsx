@@ -42,7 +42,7 @@ export default function Hero() {
             }`}
           >
             <span className="text-base">🍀</span>
-            Same-Day Service Available
+            Licensed & Insured
           </div>
 
           {/* Headline */}

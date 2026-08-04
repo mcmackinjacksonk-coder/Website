@@ -5,10 +5,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 2500, suffix: "+", label: "Jobs Completed" },
-  { value: 98, suffix: "%", label: "Customer Satisfaction" },
-  { value: 10, suffix: "+", label: "Years in Business" },
+  { value: 100, suffix: "%", label: "Upfront Pricing" },
+  { value: 0, suffix: "$", label: "Hidden Fees" },
   { value: 24, suffix: "/7", label: "Booking Available" },
+  { value: 1, suffix: "", label: "Free Estimate" },
 ];
 
 function CloverDivider() {
