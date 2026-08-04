@@ -77,13 +77,13 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+15551234567"
+              href="tel:+18035792165"
               className={`flex items-center gap-2 text-sm font-semibold transition-colors duration-200 ${
                 scrolled ? "text-[#1a7a3c]" : "text-white"
               }`}
             >
               <Phone size={15} />
-              (555) 123-4567
+              (803) 579-2165
             </a>
             <a
               href="#contact"
@@ -121,11 +121,11 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="tel:+15551234567"
+              href="tel:+18035792165"
               className="flex items-center gap-2 text-[#1a7a3c] font-semibold"
             >
               <Phone size={15} />
-              (555) 123-4567
+              (803) 579-2165
             </a>
             <a
               href="#contact"

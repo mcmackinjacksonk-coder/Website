@@ -109,9 +109,9 @@ export default function Footer() {
               Contact Us
             </h4>
             <div className="flex flex-col gap-4">
-              <a href="tel:+15551234567" className="flex items-center gap-3 text-white/70 hover:text-[#f5a623] text-sm transition-colors duration-200">
+              <a href="tel:+18035792165" className="flex items-center gap-3 text-white/70 hover:text-[#f5a623] text-sm transition-colors duration-200">
                 <Phone size={15} className="shrink-0 text-[#f5a623]" />
-                (555) 123-4567
+                (803) 579-2165
               </a>
               <a href="mailto:hello@cloverjunk.com" className="flex items-center gap-3 text-white/70 hover:text-[#f5a623] text-sm transition-colors duration-200">
                 <Mail size={15} className="shrink-0 text-[#f5a623]" />

@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "(555) 123-4567", href: "tel:+15551234567" },
+    { icon: Phone, label: "Phone", value: "(803) 579-2165", href: "tel:+18035792165" },
     { icon: Mail, label: "Email", value: "hello@cloverjunk.com", href: "mailto:hello@cloverjunk.com" },
     { icon: MapPin, label: "Service Area", value: "Austin & Surrounding Areas", href: "#" },
     { icon: Clock, label: "Hours", value: "Mon–Sat: 7am–7pm | Sun: 8am–5pm", href: "#" },
@@ -150,7 +150,7 @@ export default function Contact() {
                     value={form.phone}
                     onChange={handleChange}
                     required
-                    placeholder="(555) 000-0000"
+                    placeholder="(803) 579-2165"
                     className="w-full px-4 py-3 rounded-xl border border-[#e8f5ed] bg-[#f9f7f4] text-[#1c2b1e] text-sm focus:outline-none focus:ring-2 focus:ring-[#1a7a3c]/30 focus:border-[#1a7a3c] transition-all"
                   />
                 </div>
