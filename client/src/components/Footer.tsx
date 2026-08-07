@@ -127,7 +127,7 @@ export default function Footer() {
               href="#contact"
               className="mt-6 inline-block bg-[#f5a623] hover:bg-[#e09510] text-[#1c2b1e] font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 active:scale-95"
             >
-              Book Free Pickup
+              Book Pickup
             </a>
           </div>
         </div>

@@ -94,7 +94,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 bg-[#f5a623] hover:bg-[#e09510] text-[#1c2b1e] font-bold text-base px-8 py-4 rounded-full transition-all duration-200 active:scale-95 shadow-lg hover:shadow-xl"
             >
-              Book Free Pickup
+              Book Pickup
               <ArrowRight size={18} />
             </a>
             <a

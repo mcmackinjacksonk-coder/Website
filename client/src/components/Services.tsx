@@ -142,7 +142,7 @@ export default function Services() {
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               From a single sofa to a full estate cleanout, Clover handles it all.
-              Contact us for a free estimate on your specific needs.
+              Contact us for an estimate on your specific needs.
             </p>
           </div>
           <a

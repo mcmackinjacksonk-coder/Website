@@ -8,7 +8,7 @@ const stats = [
   { value: 100, suffix: "%", label: "Upfront Pricing" },
   { value: 0, suffix: "$", label: "Hidden Fees" },
   { value: 24, suffix: "/7", label: "Booking Available" },
-  { value: 1, suffix: "", label: "Free Estimate" },
+  { value: 1, suffix: "", label: "Estimate" },
 ];
 
 function CloverDivider() {

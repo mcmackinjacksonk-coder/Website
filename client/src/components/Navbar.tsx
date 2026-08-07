@@ -89,7 +89,7 @@ export default function Navbar() {
               href="#contact"
               className="bg-[#f5a623] hover:bg-[#e09510] text-[#1c2b1e] font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 active:scale-95 shadow-md"
             >
-              Book Free Pickup
+              Book Pickup
             </a>
           </div>
 
@@ -132,7 +132,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="bg-[#f5a623] text-[#1c2b1e] font-bold text-center py-3 rounded-full"
             >
-              Book Free Pickup
+              Book Pickup
             </a>
           </div>
         </div>

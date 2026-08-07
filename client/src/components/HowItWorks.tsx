@@ -10,8 +10,8 @@ import { CalendarCheck, Truck, Smile, ArrowRight } from "lucide-react";
   {
     icon: CalendarCheck,
     step: "01",
-    title: "Get Your Free Estimate",
-    desc: "Call or fill out our form. We'll provide an upfront price with no obligation.",
+    title: "Get Your Estimate",
+    desc: "Call or fill out our form. We'll provide an upfront price and detailed estimate.",
   },
   {
     icon: Truck,
