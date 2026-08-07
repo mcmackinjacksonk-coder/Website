@@ -35,15 +35,44 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    toast.success("Request received! We'll call you within the hour.", {
-      description: "Our team will confirm your booking shortly.",
-    });
-    setForm({ name: "", phone: "", email: "", service: "", message: "" });
+
+    try {
+      // Send to Formspree
+      const response = await fetch("https://formspree.io/f/xyzgwqvd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          service: form.service,
+          message: form.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Request received! We'll call you within the hour.", {
+          description: "Our team will confirm your booking shortly.",
+        });
+        setForm({ name: "", phone: "", email: "", service: "", message: "" });
+      } else {
+        toast.error("Failed to submit request", {
+          description: "Please try again or call us directly.",
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Failed to submit request", {
+        description: "Please try again or call us directly.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -124,6 +153,7 @@ export default function Contact() {
             <form
               onSubmit={handleSubmit}
               className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8f5ed]"
+              noValidate
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                 <div>
