@@ -24,7 +24,9 @@ export default function Contact() {
     name: "",
     phone: "",
     email: "",
+    address: "",
     service: "",
+    priority: false,
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -50,7 +52,10 @@ export default function Contact() {
           name: form.name,
           phone: form.phone,
           email: form.email,
+          address: form.address,
           service: form.service,
+          priorityService: form.priority ? "Requested (+$50)" : "Not requested",
+          priorityUpcharge: form.priority ? "$50" : "$0",
           message: form.message,
         }),
       });
@@ -59,7 +64,7 @@ export default function Contact() {
         toast.success("Request received! We'll call you within the hour.", {
           description: "Our team will confirm your booking shortly.",
         });
-        setForm({ name: "", phone: "", email: "", service: "", message: "" });
+        setForm({ name: "", phone: "", email: "", address: "", service: "", priority: false, message: "" });
       } else {
         toast.error("Failed to submit request", {
           description: "Please try again or call us directly.",
@@ -202,6 +207,21 @@ export default function Contact() {
 
               <div className="mb-5">
                 <label className="block text-sm font-semibold text-[#1c2b1e] mb-1.5">
+                  Service Address *
+                </label>
+                <input
+                  type="text"
+                  name="address"
+                  value={form.address}
+                  onChange={handleChange}
+                  required
+                  placeholder="123 Main St, Clover, SC 29710"
+                  className="w-full px-4 py-3 rounded-xl border border-[#e8f5ed] bg-[#f9f7f4] text-[#1c2b1e] text-sm focus:outline-none focus:ring-2 focus:ring-[#1a7a3c]/30 focus:border-[#1a7a3c] transition-all"
+                />
+              </div>
+
+              <div className="mb-5">
+                <label className="block text-sm font-semibold text-[#1c2b1e] mb-1.5">
                   Service Type *
                 </label>
                 <select
@@ -220,6 +240,29 @@ export default function Contact() {
                   <option value="construction">Construction Debris</option>
                   <option value="other">Other / Not Sure</option>
                 </select>
+              </div>
+
+              <div className="mb-6 rounded-xl border border-[#d4eedd] bg-[#f4fbf6] p-4">
+                <label htmlFor="priority-service" className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    id="priority-service"
+                    type="checkbox"
+                    name="priority"
+                    checked={form.priority}
+                    onChange={(e) =>
+                      setForm((prev) => ({ ...prev, priority: e.target.checked }))
+                    }
+                    className="mt-1 h-4 w-4 accent-[#1a7a3c]"
+                  />
+                  <span>
+                    <span className="block text-sm font-semibold text-[#1c2b1e]">
+                      Request Priority Service (+$50)
+                    </span>
+                    <span className="mt-1 block text-xs leading-relaxed text-gray-600">
+                      An additional $50 charge applies only if priority service is confirmed. This form does not collect payment.
+                    </span>
+                  </span>
+                </label>
               </div>
 
               <div className="mb-7">
