@@ -30,3 +30,10 @@
 - [x] Upgrade desktop and mobile visual hierarchy, spacing, navigation, and call-to-action patterns.
 - [x] Validate every page and booking path with TypeScript, production build, and representative screenshots.
 - [ ] Save, publish, and push the premium transformation to GitHub.
+
+## Comprehensive Legal Pages
+
+- [x] Replace the short privacy page with a comprehensive website-ready policy based on the current booking workflow.
+- [x] Replace the short terms page with comprehensive service-request terms, including the optional priority-service request.
+- [x] Include the actual business contact details and clearly identify the effective-date placeholder for review.
+- [x] Validate the legal pages, save, publish, and push the update to GitHub.
