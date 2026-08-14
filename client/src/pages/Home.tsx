@@ -6,8 +6,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
+import RequestStandards from "@/components/RequestStandards";
 import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
+import FaqPreview from "@/components/FaqPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -18,8 +19,9 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+      <RequestStandards />
       <HowItWorks />
-      <Testimonials />
+      <FaqPreview />
       <Contact />
       <Footer />
     </div>

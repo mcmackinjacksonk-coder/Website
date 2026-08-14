@@ -61,8 +61,8 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        toast.success("Request received! We'll call you within the hour.", {
-          description: "Our team will confirm your booking shortly.",
+        toast.success("Booking request sent.", {
+          description: "Clover Junk Removal will review the details you submitted.",
         });
         setForm({ name: "", phone: "", email: "", address: "", service: "", priority: false, message: "" });
       } else {
@@ -105,8 +105,7 @@ export default function Contact() {
             Ready to Reclaim Your Space?
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-base leading-relaxed">
-            Fill out the form and we'll reach out within the hour to confirm
-            your appointment. Same-day pickup often available.
+            Share the job details, service address, and access notes. Your request is sent to Clover Junk Removal for follow-up.
           </p>
         </div>
 
@@ -142,13 +141,13 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Free estimate note */}
+            {/* Booking expectations */}
               <div className="bg-[#e8f5ed] rounded-2xl p-6 border border-[#d4eedd]">
               <p className="text-[#1a7a3c] font-semibold text-sm mb-1">
-                🍀 Professional Estimates
+                🍀 Clear Booking Details
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We provide upfront pricing before any work begins. No hidden fees.
+                Online submission starts a request. Service details, timing, and any priority selection are confirmed after follow-up.
               </p>
             </div>
           </div>
@@ -279,6 +278,10 @@ export default function Contact() {
                 />
               </div>
 
+              <p className="-mt-3 mb-5 text-center text-xs leading-relaxed text-gray-500">
+                Submitting this form does not process payment or automatically confirm a pickup time.
+              </p>
+
               <button
                 type="submit"
                 disabled={submitting}
@@ -288,7 +291,7 @@ export default function Contact() {
                   <span className="animate-spin w-5 h-5 border-2 border-[#1c2b1e]/30 border-t-[#1c2b1e] rounded-full" />
                 ) : (
                   <>
-                    Schedule My Pickup
+                    Send Booking Request
                     <ArrowRight size={18} />
                   </>
                 )}

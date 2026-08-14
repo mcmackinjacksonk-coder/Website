@@ -1,49 +1,40 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, Home } from "lucide-react";
-import { useLocation } from "wouter";
+/**
+ * Not Found Page — Clover Junk Removal
+ * Design: Fresh & Grounded | Branded dark-green recovery screen with clover geometry and clear next actions.
+ */
+import { ArrowLeft, ArrowRight, Phone } from "lucide-react";
+import { Link } from "wouter";
+import BrandLockup from "../components/BrandLockup";
+
+function CloverMark() {
+  return (
+    <svg viewBox="0 0 200 200" className="h-full w-full" fill="currentColor" aria-hidden="true">
+      <circle cx="70" cy="70" r="50" />
+      <circle cx="130" cy="70" r="50" />
+      <circle cx="70" cy="130" r="50" />
+      <circle cx="130" cy="130" r="50" />
+      <rect x="96" y="140" width="8" height="42" rx="4" />
+    </svg>
+  );
+}
 
 export default function NotFound() {
-  const [, setLocation] = useLocation();
-
-  const handleGoHome = () => {
-    setLocation("/");
-  };
-
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
-            </div>
-          </div>
-
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
-
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
-          </h2>
-
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              <Home className="w-4 h-4 mr-2" />
-              Go Home
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    <main className="relative flex min-h-screen items-center overflow-hidden bg-[#0d2b18] px-4 py-12 text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      <div className="pointer-events-none absolute -left-24 -top-20 h-80 w-80 rotate-[-18deg] text-white/[0.055] sm:h-[32rem] sm:w-[32rem]"><CloverMark /></div>
+      <div className="pointer-events-none absolute -bottom-32 -right-20 h-80 w-80 rotate-12 text-[#f5a623]/10 sm:h-[30rem] sm:w-[30rem]"><CloverMark /></div>
+      <section className="relative mx-auto w-full max-w-3xl text-center">
+        <div className="mx-auto w-fit"><BrandLockup inverse /></div>
+        <p className="mt-10 text-xs font-bold uppercase tracking-[0.25em] text-[#f5a623]">Wrong turn</p>
+        <p className="mt-3 text-[6rem] font-bold leading-none text-white/10 sm:text-[9rem]" style={{ fontFamily: "'Playfair Display', serif" }}>404</p>
+        <h1 className="-mt-10 text-4xl font-bold leading-tight sm:-mt-14 sm:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>This page has been cleared out.</h1>
+        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70">The link may be old, or the page may have moved. Head back to Clover Junk Removal and start again from a page that is still here.</p>
+        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <Link href="/" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f5a623] px-6 py-3.5 text-sm font-bold text-[#1c2b1e] transition hover:bg-[#e09510] active:scale-[0.97]"><ArrowLeft size={16} /> Back Home</Link>
+          <Link href="/book" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">Book a Pickup <ArrowRight size={16} /></Link>
+        </div>
+        <a href="tel:+19103088190" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#f5a623] transition hover:text-white"><Phone size={15} /> (910) 308-8190</a>
+      </section>
+    </main>
   );
 }

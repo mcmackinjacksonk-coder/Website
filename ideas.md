@@ -77,3 +77,6 @@ Clover + truck icon combination mark in deep forest green. Bold condensed wordma
 - Use amber (#f5a623) exclusively for primary CTAs to maximize contrast and click-through
 - Diagonal clip-path sections use polygon(0 5%, 100% 0, 100% 100%, 0 100%) with compensating negative margins
 - All section entrance animations respect prefers-reduced-motion
+- Premium information architecture uses focused landing, services, FAQ, and booking paths rather than relying on one long page.
+- Premium trust is earned through transparent process language, service details, and clear booking expectations—not invented reviews, ratings, or guarantees.
+- Interior pages use editorial page banners, generous spacing, organic clover geometry, and a single strong conversion action per section.

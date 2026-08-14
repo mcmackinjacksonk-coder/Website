@@ -23,8 +23,8 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/manus-storage/clover_hero_69e43807.jpg"
-          alt="Clover Junk Removal team"
+          src="/manus-storage/clover-premium-hero_1ec3c2f2.jpg"
+          alt="Clover Junk Removal team arriving at a residential pickup"
           className="w-full h-full object-cover object-center"
         />
         {/* Gradient overlay — dark on left for text, lighter on right */}
@@ -42,7 +42,7 @@ export default function Hero() {
             }`}
           >
             <span className="text-base">🍀</span>
-            Licensed & Insured
+            Clover, SC 29710
           </div>
 
           {/* Headline */}
@@ -63,9 +63,9 @@ export default function Hero() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            Fast, affordable junk removal for homes and businesses. We haul it
-            all — furniture, appliances, yard debris, and more. You point, we
-            load, you relax.
+            Junk removal booking requests for homes and businesses. Share the
+            furniture, appliances, yard debris, or other items you want to
+            discuss, and Clover will follow up on the details.
           </p>
 
           {/* Trust bullets */}
@@ -74,7 +74,7 @@ export default function Hero() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            {["Licensed & Insured", "Upfront Pricing", "Eco-Friendly Disposal"].map(
+            {["Clover, SC", "Online Booking", "Detailed Requests"].map(
               (item) => (
                 <li key={item} className="flex items-center gap-2 text-white/90 text-sm font-medium">
                   <CheckCircle2 size={16} className="text-[#f5a623] shrink-0" />
@@ -91,14 +91,14 @@ export default function Hero() {
             }`}
           >
             <a
-              href="#contact"
+              href="/book"
               className="inline-flex items-center justify-center gap-2 bg-[#f5a623] hover:bg-[#e09510] text-[#1c2b1e] font-bold text-base px-8 py-4 rounded-full transition-all duration-200 active:scale-95 shadow-lg hover:shadow-xl"
             >
               Book Pickup
               <ArrowRight size={18} />
             </a>
             <a
-              href="#services"
+              href="/services"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-200"
             >
               See Our Services

@@ -146,7 +146,7 @@ export default function Services() {
             </p>
           </div>
           <a
-            href="#contact"
+            href="/book"
             className="shrink-0 inline-flex items-center gap-2 bg-[#f5a623] hover:bg-[#e09510] text-[#1c2b1e] font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 active:scale-95 shadow-md self-start lg:self-auto"
           >
             Reclaim Your Space

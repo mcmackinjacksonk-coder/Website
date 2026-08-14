@@ -1,88 +1,32 @@
 /**
- * Stats / Trust Bar — Clover Junk Removal
- * Design: Animated counters, clover accent dividers, warm white background
+ * Service Signals — Clover Junk Removal
+ * Design: Fresh & Grounded | Truthful, non-statistical operating details with clover accents and an airy whitespace rhythm.
  */
-import { useEffect, useRef, useState } from "react";
+import { ClipboardCheck, MapPin, Sparkles } from "lucide-react";
 
-const stats = [
-  { value: 100, suffix: "%", label: "Upfront Pricing" },
-  { value: 0, suffix: "$", label: "Hidden Fees" },
-  { value: 24, suffix: "/7", label: "Booking Available" },
+const signals = [
+  { icon: MapPin, title: "Clover, South Carolina", copy: "Service requests begin with your address and job details." },
+  { icon: ClipboardCheck, title: "Structured booking", copy: "Choose a service, share access notes, and send your request." },
+  { icon: Sparkles, title: "Priority option", copy: "Request priority service with a clearly disclosed +$50 option." },
 ];
-
-function CloverDivider() {
-  return (
-    <div className="hidden lg:flex items-center justify-center">
-      <svg viewBox="0 0 40 40" className="w-8 h-8 text-[#1a7a3c]/20" fill="currentColor">
-        <circle cx="14" cy="14" r="10" />
-        <circle cx="26" cy="14" r="10" />
-        <circle cx="14" cy="26" r="10" />
-        <circle cx="26" cy="26" r="10" />
-        <rect x="19" y="28" width="2" height="8" rx="1" />
-      </svg>
-    </div>
-  );
-}
-
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true); },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 1800;
-    const steps = 60;
-    const increment = value / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [started, value]);
-
-  return (
-    <span ref={ref} className="tabular-nums">
-      {count}
-      {suffix}
-    </span>
-  );
-}
 
 export default function Stats() {
   return (
-    <section className="py-16 bg-white border-y border-[#e8f5ed]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-7 gap-4 items-center">
-          {stats.map((stat, i) => (
-            <div key={`stat-${i}`}>
-              <div className="text-center col-span-1">
-                <div
-                  className="text-4xl lg:text-5xl font-bold text-[#1a7a3c] mb-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+    <section className="relative z-10 -mt-8 bg-[#f9f7f4] pb-16 pt-4 sm:-mt-12 sm:pb-20 sm:pt-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid overflow-hidden rounded-[1.75rem] border border-[#e3eee6] bg-white shadow-[0_18px_48px_rgba(13,43,24,0.06)] md:grid-cols-3">
+          {signals.map((signal, index) => {
+            const Icon = signal.icon;
+            return (
+              <article key={signal.title} className={`flex gap-4 p-6 sm:p-8 ${index < signals.length - 1 ? "border-b border-[#e8f0ea] md:border-b-0 md:border-r" : ""}`}>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#e8f5ed] text-[#1a7a3c]"><Icon size={20} /></div>
+                <div>
+                  <h2 className="text-base font-bold text-[#1c2b1e]" style={{ fontFamily: "'Playfair Display', serif" }}>{signal.title}</h2>
+                  <p className="mt-1.5 text-sm leading-relaxed text-gray-600">{signal.copy}</p>
                 </div>
-                <p className="text-gray-600 text-sm font-medium">{stat.label}</p>
-              </div>
-              {i < stats.length - 1 && <CloverDivider key={`div-${i}`} />}
-            </div>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
