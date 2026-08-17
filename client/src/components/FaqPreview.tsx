@@ -12,7 +12,7 @@ const previewQuestions = [
   },
   {
     question: "How does Priority Service work?",
-    answer: "It is an optional request with a $50 upcharge only if priority service is confirmed. The form does not collect payment.",
+    answer: "It is an optional request with a $125 upcharge only if priority service is confirmed. The form does not collect payment.",
   },
 ];
 
