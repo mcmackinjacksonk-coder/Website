@@ -24,7 +24,7 @@ const questions = [
   },
   {
     question: "What is Priority Service?",
-    answer: "Priority Service is an optional request that helps flag your booking for priority handling. It has a $50 upcharge only if priority service is confirmed. The booking form does not collect payment.",
+    answer: "Priority Service is an optional request that helps flag your booking for priority handling. It has a $125 upcharge only if priority service is confirmed. The booking form does not collect payment.",
   },
   {
     question: "Does booking online guarantee a pickup time?",
