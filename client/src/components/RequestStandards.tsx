@@ -38,7 +38,7 @@ export default function RequestStandards() {
           })}
           <div className="flex items-start gap-3 rounded-[1.75rem] border border-[#f5a623]/25 bg-[#f5a623]/10 p-6 text-sm leading-relaxed text-white/75 lg:mr-10">
             <ShieldCheck className="mt-0.5 shrink-0 text-[#f5a623]" size={20} />
-            <p><span className="font-bold text-white">Optional Priority Service:</span> selecting the priority option requests priority handling. A $50 upcharge applies only when priority service is confirmed, and the website does not collect payment.</p>
+            <p><span className="font-bold text-white">Optional Priority Service:</span> selecting the priority option requests priority handling. A $125 upcharge applies only when priority service is confirmed, and the website does not collect payment.</p>
           </div>
         </div>
       </div>
