@@ -37,3 +37,9 @@
 - [x] Replace the short terms page with comprehensive service-request terms, including the optional priority-service request.
 - [x] Include the actual business contact details and clearly identify the effective-date placeholder for review.
 - [x] Validate the legal pages, save, publish, and push the update to GitHub.
+
+## Priority Service Price Correction
+
+- [x] Replace all $50 Priority Service disclosures with $125 across customer-facing pages.
+- [x] Verify the booking form sends the corrected $125 value to Formspree.
+- [x] Validate the correction, save, publish, and push it to GitHub.
