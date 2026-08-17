@@ -54,8 +54,8 @@ export default function Contact() {
           email: form.email,
           address: form.address,
           service: form.service,
-          priorityService: form.priority ? "Requested (+$50)" : "Not requested",
-          priorityUpcharge: form.priority ? "$50" : "$0",
+          priorityService: form.priority ? "Requested (+$125)" : "Not requested",
+          priorityUpcharge: form.priority ? "$125" : "$0",
           message: form.message,
         }),
       });
@@ -255,10 +255,10 @@ export default function Contact() {
                   />
                   <span>
                     <span className="block text-sm font-semibold text-[#1c2b1e]">
-                      Request Priority Service (+$50)
+                      Request Priority Service (+$125)
                     </span>
                     <span className="mt-1 block text-xs leading-relaxed text-gray-600">
-                      An additional $50 charge applies only if priority service is confirmed. This form does not collect payment.
+                      An additional $125 charge applies only if priority service is confirmed. This form does not collect payment.
                     </span>
                   </span>
                 </label>
