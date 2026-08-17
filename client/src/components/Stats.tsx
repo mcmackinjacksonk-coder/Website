@@ -7,7 +7,7 @@ import { ClipboardCheck, MapPin, Sparkles } from "lucide-react";
 const signals = [
   { icon: MapPin, title: "Clover, South Carolina", copy: "Service requests begin with your address and job details." },
   { icon: ClipboardCheck, title: "Structured booking", copy: "Choose a service, share access notes, and send your request." },
-  { icon: Sparkles, title: "Priority option", copy: "Request priority service with a clearly disclosed +$50 option." },
+  { icon: Sparkles, title: "Priority option", copy: "Request priority service with a clearly disclosed +$125 option." },
 ];
 
 export default function Stats() {
