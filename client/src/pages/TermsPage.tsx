@@ -64,7 +64,7 @@ export default function TermsPage() {
 
               <section id="priority">
                 <TermsHeading>3. Optional Priority Service</TermsHeading>
-                <TermsText>The booking form includes an optional “Request Priority Service (+$50)” checkbox. Selecting this checkbox asks Clover Junk Removal to consider your request for priority handling. The $50 upcharge applies only if Priority Service is confirmed with you. The website does not collect payment, and selecting the checkbox does not itself create a charge, appointment, or guarantee of service availability.</TermsText>
+                <TermsText>The booking form includes an optional “Request Priority Service (+$125)” checkbox. Selecting this checkbox asks Clover Junk Removal to consider your request for priority handling. The $125 upcharge applies only if Priority Service is confirmed with you. The website does not collect payment, and selecting the checkbox does not itself create a charge, appointment, or guarantee of service availability.</TermsText>
               </section>
 
               <section id="pricing">
